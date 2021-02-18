@@ -13,7 +13,7 @@ namespace WebApplication5
         {
             string connectionString;
             SqlConnection cnn;
-            connectionString = @"Data Source=LAPTOP-M1762B2U\SQLEXPRESS; User ID=cheikh2; Password=jahedwalid10";
+            connectionString = @"Data Source=LAPTOP-M1762B2U\SQLEXPRESS; database=db; User ID=cheikh2; Password=jahedwalid10";
             cnn = new SqlConnection(connectionString);
             cnn.Open();
             Response.Write("Connexion réussie");
