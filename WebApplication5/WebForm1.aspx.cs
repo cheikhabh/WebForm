@@ -11,6 +11,17 @@ namespace WebApplication5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string connectionString;
+            SqlConnection cnn;
+            connectionString = @"Data Source=LAPTOP-M1762B2U\SQLEXPRESS; User ID=cheikh2; Password=jahedwalid10";
+            cnn = new SqlConnection(connectionString);
+            cnn.Open();
+            Response.Write("Connexion réussie");
+            cnn.Close();
+
+            Session["Name"] = TextBox.Text;
+            Response.Write(Session["Name"]);
+            
             Response.Write(TextBox1.Text + "<br>");
             Response.Write(TextBox2.Text + "<br>");
             Response.Write(TextBox3.Text + "<br>");
